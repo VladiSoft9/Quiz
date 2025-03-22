@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body{
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.app{
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.app h1{
+    font-weight: bold;
+    color: brown;
+    font-size: 55px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 30px;
+
+
+}
+
+.quiz{
+    padding: 20px 0;
+
+}
+
+.quiz h2{
+    font-size: 18px;
+    color: rgb(167, 98, 98);
+    font-style: italic;
+}
+
+.quiz h2 img{
+    width: 300px;
+    display: block;
+}
+
+.btn{
+    background: white;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid rgb(196, 196, 139);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5;
+
+}
+
+.btn:hover:not([disabled]){
+    background: rgb(168, 168, 111);
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#nextBtn{
+    background: rgb(5, 46, 180);
+    color: black;
+    border: 1px solid rgb(196, 196, 139);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    width: 20%;
+    display: none
+}
+
+#nextBtn:hover{
+    background: rgb(168, 168, 111);
+}
+
+.correct{
+    background-color: aquamarine;
+}
+
+.incorrect{
+    background-color: rgb(224, 10, 10);
+}
+
+.bgControl{
+    position: relative;
+    margin-left: 85%;
+    margin-top: 20px;
+    
+}
+
+
+.bgControl h2{
+    font-size: 13px;
+    color: rgb(167, 98, 98);
+    font-style: italic;
+}
+
+.btnBG{
+    background: white;
+    color: black;
+    font-weight: 500;
+    border: 1px solid rgb(196, 196, 139);
+    padding: 5px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5;
+}
+
+.btnBG:hover{
+    background: rgb(168, 168, 111);
+}
