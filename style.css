@@ -22,7 +22,16 @@ body{
     padding: 30px;
 }
 
-.app h1{
+.appDark{
+    background: rgb(59, 54, 54);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+h1{
     font-weight: bold;
     color: brown;
     font-size: 55px;
@@ -50,6 +59,21 @@ body{
 
 .btn{
     background: white;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid rgb(196, 196, 139);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5;
+
+}
+
+.btnDark{
+    background: rgb(94, 79, 79);
     color: black;
     font-weight: 500;
     width: 100%;
@@ -111,6 +135,19 @@ body{
 
 .btnBG{
     background: white;
+    color: black;
+    font-weight: 500;
+    border: 1px solid rgb(196, 196, 139);
+    padding: 5px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5;
+}
+
+.btnBGDark{
+    background: rgb(94, 79, 79);
     color: black;
     font-weight: 500;
     border: 1px solid rgb(196, 196, 139);

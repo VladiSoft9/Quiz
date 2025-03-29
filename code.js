@@ -60,6 +60,8 @@ const nextBtn = document.getElementById('nextBtn')
 const DarkBtn = document.getElementById('DarkBtn')
 const LightBtn = document.getElementById('LightBtn')
 const PicBtn = document.getElementById('PicBtn')
+const QBox = document.getElementById('QBox')
+
 
 
 let currentQI = 0
@@ -88,6 +90,14 @@ function showQuestion(){
         }
         button.addEventListener('click', selectAnswer)
     })
+
+    // To apply dark mode again when next question appears, if dark mode is selected
+    if(document.body.classList.contains('dark-mode')){
+        const buttons = document.querySelectorAll('.btn')
+        buttons.forEach(button =>{
+            button.classList.add('btnDark')
+        })
+    }
 }
 
 function resetScreen(){
@@ -155,16 +165,60 @@ startQuiz()
 function switchToDark(event){
     document.body.style.backgroundColor = 'black'
     document.body.style.backgroundImage = 'none'
+    QBox.classList.remove('app')
+    QBox.classList.add('appDark')
+
+    // Add dark mode styles to body for tracking the dark mode
+    document.body.classList.add('dark-mode')
+
+    const buttons = document.querySelectorAll('.btn')
+    buttons.forEach(button =>{
+        button.classList.add('btnDark')
+    })
+
+    const BGbuttons = document.querySelectorAll('.btnBG')
+    BGbuttons.forEach(BGbutton => {
+        BGbutton.classList.add('btnBGDark')
+    })
 
 }
 
 function switchToLight(event){
     document.body.style.backgroundColor = 'rgb(168, 168, 111)'
     document.body.style.backgroundImage = 'none'
+    QBox.classList.remove('appDark')
+    QBox.classList.add('app')
+
+    document.body.classList.remove('dark-mode')
+
+
+    const buttons = document.querySelectorAll('.btn')
+    buttons.forEach(button => {
+        button.classList.remove('btnDark')
+    })
+
+    const BGbuttons = document.querySelectorAll('.btnBG')
+    BGbuttons.forEach(BGbutton => {
+        BGbutton.classList.remove('btnBGDark')
+    })
 }
 
 function insertPic(event){
     document.body.style.backgroundImage = 'url(image.jpg)'
+    QBox.classList.remove('appDark')
+    QBox.classList.add('app')
+
+    document.body.classList.remove('dark-mode')
+
+    const buttons = document.querySelectorAll('.btn')
+    buttons.forEach(button => {
+        button.classList.remove('btnDark')
+    })
+
+    const BGbuttons = document.querySelectorAll('.btnBG')
+    BGbuttons.forEach(BGbutton => {
+        BGbutton.classList.remove('btnBGDark')
+    })
 }
 
 DarkBtn.addEventListener('click', switchToDark )
