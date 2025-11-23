@@ -71,16 +71,19 @@ function startQuiz(){
     currentQI = 0
     score = 0
     nextBtn.innerHTML = 'Next'
+    nextBtn.style.display = 'none'
+    nextBtn.style.margin = '20px 0'
     showQuestion()
 }
 
 function showQuestion(){
     resetScreen()
-    let currentQuestion = questions[currentQI]
+    nextBtn.style.display = 'none'
+    let currentQA = questions[currentQI]
     let questionNo = currentQI + 1
-    question.innerHTML = questionNo + '. ' + currentQuestion.question
+    question.innerHTML = questionNo + '. ' + currentQA.question
 
-    currentQuestion.answer.forEach(answer =>{
+    currentQA.answer.forEach(answer =>{
         const button = document.createElement('button')
         button.innerHTML = answer.text
         button.classList.add('btn')
@@ -139,6 +142,7 @@ function showScore(){
     }
     nextBtn.innerHTML = 'Play Again'
     nextBtn.style.display = 'block'
+    nextBtn.style.margin = '20px auto'
 }
 
 function handleNextBtn(){

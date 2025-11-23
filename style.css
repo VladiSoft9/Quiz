@@ -5,15 +5,14 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-body{
+body {
     background-image: url('image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
 }
 
-.app{
+.app,
+.appDark {
     background: white;
     width: 90%;
     max-width: 600px;
@@ -22,143 +21,177 @@ body{
     padding: 30px;
 }
 
-.appDark{
+.appDark {
     background: rgb(59, 54, 54);
-    width: 90%;
-    max-width: 600px;
-    margin: 100px auto;
-    border-radius: 20px;
-    padding: 30px;
 }
 
-h1{
+h1 {
     font-weight: bold;
     color: brown;
     font-size: 55px;
     border-bottom: 1px solid gray;
     padding-bottom: 30px;
-
-
+    text-align: center;   
 }
 
-.quiz{
+.quiz {
     padding: 20px 0;
-
 }
 
-.quiz h2{
+.quiz h2 {
     font-size: 18px;
     color: rgb(167, 98, 98);
     font-style: italic;
 }
 
-.quiz h2 img{
-    width: 300px;
+.quiz h2 img {
+    width: 100%;   
+    max-width: 300px;
     display: block;
+    margin: auto;
 }
 
-.btn{
+.btn,
+.btnDark {
     background: white;
     color: black;
     font-weight: 500;
     width: 100%;
     border: 1px solid rgb(196, 196, 139);
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     text-align: left;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.5;
-
+    transition: 0.3s;
 }
 
-.btnDark{
+.btnDark {
     background: rgb(94, 79, 79);
-    color: black;
-    font-weight: 500;
-    width: 100%;
-    border: 1px solid rgb(196, 196, 139);
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5;
-
 }
 
-.btn:hover:not([disabled]){
+.btn:hover:not([disabled]) {
     background: rgb(168, 168, 111);
 }
 
-.btn:disabled{
+.btn:disabled {
     cursor: no-drop;
 }
 
-#nextBtn{
+#nextBtn {
     background: rgb(5, 46, 180);
     color: black;
     border: 1px solid rgb(196, 196, 139);
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     margin: 20px 0;
-    width: 20%;
-    display: none
+    width: 40%;   
+    max-width: 200px;
+    display: none;
 }
 
-#nextBtn:hover{
+#nextBtn:hover {
     background: rgb(168, 168, 111);
 }
 
-.correct{
+.correct {
     background-color: aquamarine;
 }
 
-.incorrect{
+.incorrect {
     background-color: rgb(224, 10, 10);
 }
 
-.bgControl{
+.bgControl {
     position: relative;
-    margin-left: 85%;
-    margin-top: 20px;
-    
+    margin: 20px;
+    text-align: right;  
 }
 
-
-.bgControl h2{
+.bgControl h2 {
     font-size: 13px;
     color: rgb(167, 98, 98);
     font-style: italic;
 }
 
-.btnBG{
+.btnBG,
+.btnBGDark {
     background: white;
     color: black;
     font-weight: 500;
     border: 1px solid rgb(196, 196, 139);
-    padding: 5px;
+    padding: 5px 10px;
     margin: 10px 0;
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.5;
+    transition: 0.3s;
 }
 
-.btnBGDark{
+.btnBGDark {
     background: rgb(94, 79, 79);
-    color: black;
-    font-weight: 500;
-    border: 1px solid rgb(196, 196, 139);
-    padding: 5px;
-    margin: 10px 0;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5;
 }
 
-.btnBG:hover{
+.btnBG:hover {
     background: rgb(168, 168, 111);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .app,
+    .appDark {
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .quiz h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #nextBtn {
+        width: 100%;
+        max-width: none;
+    }
+
+    .bgControl {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #bgButtons {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .app,
+    .appDark {
+        margin: 60px auto;
+        padding: 25px;
+    }
+
+    #nextBtn {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+       min-height: 100vh;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
 }
