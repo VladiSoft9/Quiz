@@ -54,6 +54,15 @@ const questions = [
 
 ]
 
+// Caching images in advance for faster loading when needed
+const img1 = new Image()
+img1.src = 'AW.jpg'
+const img2 = new Image()
+img2.src = 'PV.jpg' 
+const img3 = new Image()
+img3.src = 'image.jpg'
+
+
 const question = document.getElementById('question')
 const answerBtns = document.getElementById('answer-buttons') 
 const nextBtn = document.getElementById('nextBtn')
